@@ -173,6 +173,8 @@ class FreshVariableNewTypeSubstitutor(val freshVariables: List<TypeVariableFromC
     companion object {
         val Empty = FreshVariableNewTypeSubstitutor(emptyList())
     }
+
+    fun isEmpty(): Boolean = freshVariables.isEmpty()
 }
 
 fun UnwrappedType.substituteTypeVariable(typeVariable: NewTypeVariable, value: UnwrappedType): UnwrappedType {
